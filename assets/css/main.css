@@ -61,6 +61,11 @@ h6 {
 /*--------------------------------------------------------------
 #f42a2a
 --------------------------------------------------------------*/
+
+.product-item {
+  height: 400px; /* Or adjust height as needed */
+}
+
 .header {
   --background-color: white;
   --heading-color: #ffffff;
@@ -2816,4 +2821,8 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.isotope-container {
+  height: inherit !important;
 }

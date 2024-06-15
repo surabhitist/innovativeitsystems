@@ -34,9 +34,15 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <link href="assets/css/main.css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+   
+
+    
   </head>
 
   <body class="index-page">
+    
     <header id="header" class="header fixed-top">
       <div class="topbar d-flex align-items-center">
         <div
@@ -69,7 +75,7 @@
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <!-- <img src="assets/img/logo.png" alt=""> -->
             <img src="assets/img/logo.webp" alt="" />
-            <span style="color: rgb(225, 40, 40)"
+            <span style="color: rgb(225, 40, 40); font-family: 'Times New Roman', Times, serif;"
               ><strong>Innovative IT Systems</strong></span
             >
           </a>
@@ -81,7 +87,7 @@
               </li>
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Gallery</a></li>
+              <li><a href="#portfolio">Products</a></li>
               <!-- <li><a href="#team">Team</a></li> -->
               <!-- <li><a href="blog.html">Blog</a></li>
               <li class="dropdown">
@@ -138,10 +144,10 @@
               </p>
               <div class="d-flex" style="padding-bottom: 30px">
                 <a href="#about" class="btn-get-started">Get Started</a>
-                <a
+                <!-- <a
                   href="https://youtu.be/0beFAEWg3CI?si=i_NtSE1xxHmKV3nZ"
                   class="glightbox btn-watch-video d-flex align-items-center"
-                  ><i class="bi bi-play-circle"></i><span>Watch Video</span></a
+                  ><i class="bi bi-play-circle"></i><span>Watch Video</span></a -->
                 >
               </div>
             </div>
@@ -305,10 +311,10 @@
                     class="img-fluid rounded-4"
                     alt=""
                   />
-                  <a
+                  <!-- <a
                     href="https://youtu.be/0beFAEWg3CI?si=i_NtSE1xxHmKV3nZ"
                     class="glightbox play-btn"
-                  ></a>
+                  ></a> -->
                 </div>
               </div>
             </div>
@@ -485,7 +491,7 @@
               </div>
               <div class="swiper-slide">
                 <img
-                  src="assets/img/clients/client-2.png"
+                  src="assets/img/clients/client-2.jpg"
                   class="img-fluid"
                   alt=""
                 />
@@ -513,7 +519,7 @@
               </div>
               <div class="swiper-slide">
                 <img
-                  src="assets/img/clients/client-6.png"
+                  src="assets/img/clients/client-6.jpg"
                   class="img-fluid"
                   alt=""
                 />
@@ -525,13 +531,13 @@
                   alt=""
                 />
               </div>
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <img
                   src="assets/img/clients/client-8.png"
                   class="img-fluid"
                   alt=""
                 />
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -554,7 +560,7 @@
                     <div>
                       <span
                         data-purecounter-start="0"
-                        data-purecounter-end="232"
+                        data-purecounter-end="5232"
                         data-purecounter-duration="1"
                         class="purecounter"
                       ></span>
@@ -573,7 +579,7 @@
                     <div>
                       <span
                         data-purecounter-start="0"
-                        data-purecounter-end="521"
+                        data-purecounter-end="10521"
                         data-purecounter-duration="1"
                         class="purecounter"
                       ></span>
@@ -592,7 +598,7 @@
                     <div>
                       <span
                         data-purecounter-start="0"
-                        data-purecounter-end="1453"
+                        data-purecounter-end="301453"
                         data-purecounter-duration="1"
                         class="purecounter"
                       ></span>
@@ -641,10 +647,10 @@
           >
             <div class="col-xl-10">
               <div class="text-center">
-                <a
+                <!-- <a
                   href="https://youtu.be/0beFAEWg3CI?si=i_NtSE1xxHmKV3nZ"
                   class="glightbox play-btn"
-                ></a>
+                ></a> -->
                 <!-- <h3>Contact Us</h3> -->
                 <p>
                   Join us at <strong>Innovative IT Systems,</strong>and
@@ -862,395 +868,38 @@
             data-layout="masonry"
             data-sort="original-order"
           >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">CCTV</li>
-              <li data-filter=".filter-product">Time Attendance</li>
-              <li data-filter=".filter-branding">Access controls</li>
-              <li data-filter=".filter-books">Gate automation</li>
-              <li data-filter=".filter-garage">Garage door automation</li>
-            </ul>
-            <!-- End Portfolio Filters -->
+            
 
             <div
               class="row gy-4 isotope-container"
               data-aos="fade-up"
-              data-aos-delay="200"
+              data-aos-delay="200" id="product-container"
             >
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
+
+              <!-- <div
+              class="col-lg-4 col-md-6 portfolio-item isotope-item"
+              > -->
+              <!-- 
                 <div class="portfolio-content h-100">
                   <a
-                    href="assets/img/portfolio/app-1.jpg"
+                    href="assets/img/portfolio/2.jpg"
                     data-gallery="portfolio-gallery-app"
                     class="glightbox"
                     ><img
-                      src="assets/img/portfolio/app-1.jpg"
+                      src="assets/img/portfolio/2.jpg"
                       class="img-fluid"
                       alt=""
                   /></a>
                   <div class="portfolio-info">
                     <h4>
                       <a title="More Details"
-                        >CCTV</a
+                        >DS 2CD1723G1 I(Z)(S)</a
                       >
                     </h4>
-                    <p>CCTV details</p>
+                    <p>2.0 MP VF Network Dome Camera</p>
                   </div>
                 </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/product-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Time Attendance</a
-                      >
-                    </h4>
-                    <p>Time Attendance details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/branding-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Access controls</a
-                      >
-                    </h4>
-                    <p>Access controls details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/books-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Gate Automation</a
-                      >
-                    </h4>
-                    <p>Gate automation details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/app-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/app-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >CCTV</a
-                      >
-                    </h4>
-                    <p>CCTV details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/product-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Time Attendance</a
-                      >
-                    </h4>
-                    <p>Time attendance details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/branding-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Access Controls</a
-                      >
-                    </h4>
-                    <p>Access controls details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/books-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Gate Automation</a
-                      >
-                    </h4>
-                    <p>Gate automation details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/app-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/app-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >CCTV</a
-                      >
-                    </h4>
-                    <p>CCTV details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/product-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Time Attendance</a
-                      >
-                    </h4>
-                    <p>Time attendance details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/branding-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Access Controls</a
-                      >
-                    </h4>
-                    <p>Access controls details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/books-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Gate Automation</a
-                      >
-                    </h4>
-                    <p>Gate automation details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-garage"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/garage-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/garage-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Garage Door Automation</a
-                      >
-                    </h4>
-                    <p>Garage door automation details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-garage"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/garage-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/garage-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Garage Door Automation</a
-                      >
-                    </h4>
-                    <p>Garage door automation details</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-garage"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/garage-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/garage-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a  title="More Details"
-                        >Garage Door Automation</a
-                      >
-                    </h4>
-                    <p>Garage door automation details</p>
-                  </div>
-                </div>
-              </div>
+              </div> -->
               <!-- End Portfolio Item -->
             </div>
             <!-- End Portfolio Container -->
@@ -1336,7 +985,37 @@
               </div>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <form id="contact-form" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                      <div class="form-group col-md-6">
+                          <label for="name">Your Name</label>
+                          <input type="text" name="name" class="form-control" id="name" required />
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="name">Your Email</label>
+                          <input type="email" class="form-control" name="email" id="email" required />
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="subject">Subject</label>
+                      <input type="text" class="form-control" name="subject" id="subject" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+                  </div>
+          
+                  <div class="text-center">
+                      <button type="submit">Send Message</button>
+                  </div>
+                  <div>
+                      <p id="message_para"></p>
+                  </div>
+              </form>
+          </div>
+
+            <!-- <div class="col-lg-8">
               <form
                 action="forms/contact.php"
                 method="post"
@@ -1396,7 +1075,7 @@
                   </div>
                 </div>
               </form>
-            </div>
+            </div> -->
             <!-- End Contact Form -->
           </div>
         </div>
@@ -1499,7 +1178,264 @@
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    
+    
+    <script>
+      const styles = `
+  .modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+  }
+
+  .modal-left {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .modal-right {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+`;
+const styleElement = document.createElement("style");
+styleElement.innerHTML = styles;
+document.head.appendChild(styleElement);
+
+  function showModal(img) {
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.style.zIndex = "1200";
+    modal.innerHTML = `
+      <div class="modal-content" style="z-index: 1200;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        
+        <div class="modal-right">
+          <h2>${img.dataset.title || " "}</h2>
+          <h4>${img.dataset.subtitle || " "}</h4>
+          <p>${img.dataset.details1 || " "}</p>
+          <p>${img.dataset.details2 || " "}</p>
+          <p>${img.dataset.details3 || " "}</p>
+          <p>${img.dataset.details4 || " "}</p>
+          <p>${img.dataset.details5 || " "}</p>
+          <p>${img.dataset.details6 || " "}</p>
+          <p>${img.dataset.details7 || " "}</p>
+          <p>${img.dataset.details8 || " "}</p>
+          <p>${img.dataset.details9 || " "}</p>
+          <p>${img.dataset.details10 || " "}</p>
+          <p>${img.dataset.details11 || " "}</p>
+          <p>${img.dataset.details12 || " "}</p>
+          <p>${img.dataset.details13 || " "}</p>
+          <p>${img.dataset.details14 || " "}</p>
+          <p>${img.dataset.details15 || " "}</p>
+          <p>${img.dataset.details16 || " "}</p>
+          <p>${img.dataset.details17 || " "}</p>
+          <p>${img.dataset.details18 || " "}</p>
+          <p>${img.dataset.details19 || " "}</p>
+          <p>${img.dataset.details20 || " "}</p>
+          <p>${img.dataset.details21 || " "}</p>
+          <p>${img.dataset.details22 || " "}</p>
+          <p>${img.dataset.details23 || " "}</p>
+          <p>${img.dataset.details24 || " "}</p>
+          <p>${img.dataset.details25 || " "}</p>
+          <p>${img.dataset.details26 || " "}</p>
+          <p>${img.dataset.details27 || " "}</p>
+          <p>${img.dataset.details28 || " "}</p>
+          <p>${img.dataset.details29 || " "}</p>
+          <p>${img.dataset.details30 || " "}</p>
+          <p>${img.dataset.details31 || " "}</p>
+          <p>${img.dataset.details32 || " "}</p>
+          <p>${img.dataset.details33 || " "}</p>
+          <p>${img.dataset.details34 || " "}</p>
+          <p>${img.dataset.details35 || " "}</p>
+          <p>${img.dataset.details36 || " "}</p>
+          <p>${img.dataset.details37 || " "}</p>
+          <p>${img.dataset.details38 || " "}</p>
+          <p>${img.dataset.details39 || " "}</p>
+          <p>${img.dataset.details40 || " "}</p>
+          <p>${img.dataset.details41 || " "}</p>
+          <p>${img.dataset.details42 || " "}</p>
+          <p>${img.dataset.details43 || " "}</p>
+          <p>${img.dataset.details44 || " "}</p>
+          <p>${img.dataset.details45 || " "}</p>
+          <p>${img.dataset.details46 || " "}</p>
+          <p>${img.dataset.details47 || " "}</p>
+          <p>${img.dataset.details48 || " "}</p>
+          <p>${img.dataset.details49 || " "}</p>
+          <p>${img.dataset.details50 || " "}</p>
+          <p>${img.dataset.details51 || " "}</p>
+          <p>${img.dataset.details52 || " "}</p>
+          <p>${img.dataset.details53 || " "}</p>
+          <p>${img.dataset.details54 || " "}</p>
+          <p>${img.dataset.details55 || " "}</p>
+          <p>${img.dataset.details56 || " "}</p>
+          <p>${img.dataset.details57 || " "}</p>
+          <p>${img.dataset.details58 || " "}</p>
+          <p>${img.dataset.details59 || " "}</p>
+          <p>${img.dataset.details60 || " "}</p>
+          <p>${img.dataset.details61 || " "}</p>
+          <p>${img.dataset.details62 || " "}</p>
+          <p>${img.dataset.details63 || " "}</p>
+          <p>${img.dataset.details64 || " "}</p>
+          <p>${img.dataset.details65 || " "}</p>
+          <p>${img.dataset.details66 || " "}</p>
+          <p>${img.dataset.details67 || " "}</p>
+          <p>${img.dataset.details68 || " "}</p>
+          <p>${img.dataset.details69 || " "}</p>
+          <p>${img.dataset.details70 || " "}</p>
+          <p>${img.dataset.details71 || " "}</p>
+          <p>${img.dataset.details72 || " "}</p>
+          <p>${img.dataset.details73 || " "}</p>
+          <p>${img.dataset.details74 || " "}</p>
+          <p>${img.dataset.details75 || " "}</p>
+          <p>${img.dataset.details76 || " "}</p>
+          <p>${img.dataset.details77 || " "}</p>
+          <p>${img.dataset.details78 || " "}</p>
+          <p>${img.dataset.details79 || " "}</p>
+          <p>${img.dataset.details80 || " "}</p>
+          <p>${img.dataset.details81 || " "}</p>
+          <p>${img.dataset.details82 || " "}</p>
+          <p>${img.dataset.details83 || " "}</p>
+          <p>${img.dataset.details84 || " "}</p>
+          <p>${img.dataset.details85 || " "}</p>
+          <p>${img.dataset.details86 || " "}</p>
+          <p>${img.dataset.details87 || " "}</p>
+          <p>${img.dataset.details88 || " "}</p>
+          <p>${img.dataset.details89 || " "}</p>
+          <p>${img.dataset.details90 || " "}</p>
+          <p>${img.dataset.details91 || " "}</p>
+          <p>${img.dataset.details92 || " "}</p>
+          <p>${img.dataset.details93 || " "}</p>
+          <p>${img.dataset.details94 || " "}</p>
+          <p>${img.dataset.details95 || " "}</p>
+          <p>${img.dataset.details96 || " "}</p>
+          <p>${img.dataset.details97 || " "}</p>
+          <p>${img.dataset.details98 || " "}</p>
+          <p>${img.dataset.details99 || " "}</p>
+          <p>${img.dataset.details100 || " "}</p>
+          
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+
+  function closeModal() {
+    const modal = document.querySelector(".modal");
+    modal.parentNode.removeChild(modal);
+  }
+    </script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("IHTKRWsDC0vbNaekm");
+
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            send();
+        });
+    });
+
+    function send() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+
+        if (name.trim() === "") {
+            alert("Please enter your name");
+            return;
+        }
+        if (email.trim() === "" || !isValidEmail(email)) {
+            alert("Please enter a valid email address");
+            return;
+        }
+        if (subject.trim() === "") {
+            alert("Please enter a subject");
+            return;
+        }
+        if (message.trim() === "") {
+            alert("Please enter a message");
+            return;
+        }
+
+        var params = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+        };
+
+        const serviceID = "service_trvn9ou";
+        const templateID = "template_403o5bt";
+
+        emailjs.send(serviceID, templateID, params)
+            .then((res) => {
+                // Clear form fields
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("subject").value = "";
+                document.getElementById("message").value = "";
+                alert("Email sent successfully");
+            })
+            .catch((err) => console.log(err));
+    }
+
+    function displayError(element, message) {
+        if (!element) {
+            console.error("Element not found for displayError:", element);
+            return;
+        }
+
+        const errorElement = document.createElement("div");
+        errorElement.classList.add("error-message");
+        errorElement.textContent = message;
+        element.classList.add("error");
+        element.parentNode.insertBefore(errorElement, element.nextSibling);
+    }
+
+    // Function to validate email format
+    function isValidEmail(email) {
+        // Regular expression for email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+</script>
+    
   </body>
 </html>
