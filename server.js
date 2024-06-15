@@ -1,27 +1,30 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const admin = require("firebase-admin"); // Import Firebase Admin SDK
+const admin = require("firebase-admin");
+const dotenv = require("dotenv");
 
-// Initialize Firebase Admin SDK
-const serviceAccount = require("./serviceAccountKey.json"); // Replace with your actual path
+// Load environment variables from .env file
+dotenv.config();
+
+// Initialize Firebase Admin SDK with environment variable
+const serviceAccount = require(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://innovativeitsystemsnew.firebaseio.com", // Replace with your Firebase database URL
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
 });
 
-let initialPath = path.join(__dirname);
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static(initialPath));
+app.use(express.static(path.join(__dirname)));
 
 app.get("/:products", (req, res) => {
-  res.sendFile(path.join(initialPath, "page.html"));
+  res.sendFile(path.join(__dirname, "page.html"));
 });
 
 app.use((req, res) => {
-  res.join("404 - File not found");
+  res.status(404).send("404 - File not found");
 });
 
 app.listen(3000, () => {
